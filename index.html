@@ -3,753 +3,1194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>81 İl Plaka — Türkiye Plaka Kodlarını Öğren</title>
-  <meta name="description" content="Türkiye'nin 81 iline ait plaka kodlarını eğlenceli quiz'lerle öğren. Flashcard, çoktan seçmeli, hız turu ve sıralı mod. Ücretsiz, reklamsız, offline çalışır." />
-  <meta name="keywords" content="plaka kodu, türkiye iller, plaka ezberleme, il plaka quiz, 81 il" />
+  <title>81 Il Plaka | Turkiye plaka kodlarini hizli ogren</title>
+  <meta
+    name="description"
+    content="81 Il Plaka ile Turkiye'nin plaka kodlarini sade bir deneyimle ogren. Kisa onboarding, farkli quiz modlari, offline kullanim ve ucretsiz iOS uygulamasi."
+  />
+  <meta
+    name="keywords"
+    content="81 il plaka, plaka kodlari, turkiye illeri, plaka ezberleme, iOS quiz uygulamasi"
+  />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="81 İl Plaka — Türkiye Plaka Kodlarını Öğren" />
-  <meta property="og:description" content="Flashcard'dan hız turuna 5 farklı mod. Ücretsiz iOS uygulaması." />
+  <meta property="og:title" content="81 Il Plaka" />
+  <meta
+    property="og:description"
+    content="Ac, modu sec ve birkac dakikada Turkiye'nin plaka kodlarini ogren."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../icon-512.png" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="81 İl Plaka" />
-  <meta name="twitter:description" content="Türkiye'nin 81 iline ait plaka kodlarını eğlenceli quiz'lerle öğren." />
+  <meta name="twitter:title" content="81 Il Plaka" />
+  <meta
+    name="twitter:description"
+    content="Turkiye'nin 81 iline ait plaka kodlarini sade ve hizli bir deneyimle ogren."
+  />
 
   <link rel="icon" href="../icon-192.png" sizes="192x192" type="image/png" />
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
 
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; }
 
     :root {
-      --bg:      #0b1120;
-      --surface: #111827;
-      --border:  #1e2d45;
-      --text:    #e2e8f0;
-      --muted:   #94a3b8;
-      --accent:  #818cf8;
-      --accent2: #a78bfa;
+      --bg: #f7f1e7;
+      --bg-soft: #fffaf3;
+      --paper: rgba(255, 250, 243, 0.82);
+      --card: #fffdf8;
+      --card-strong: #fff7ea;
+      --text: #1d1b19;
+      --muted: #655f58;
+      --line: rgba(29, 27, 25, 0.12);
+      --accent: #e86e37;
+      --accent-strong: #bb4f20;
+      --accent-soft: #ffe0d0;
+      --forest: #1f5c47;
+      --shadow: 0 22px 60px rgba(101, 67, 33, 0.12);
+      --radius-lg: 32px;
+      --radius-md: 22px;
+      --radius-sm: 16px;
+      --max: 1140px;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
+      margin: 0;
+      font-family: "Manrope", sans-serif;
       color: var(--text);
-      line-height: 1.65;
+      background:
+        radial-gradient(circle at top left, rgba(232, 110, 55, 0.12), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(31, 92, 71, 0.12), transparent 28%),
+        linear-gradient(180deg, #fbf6ee 0%, #f5eee2 100%);
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
-    nav {
+    a { color: inherit; }
+
+    img { max-width: 100%; display: block; }
+
+    .page-shell {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: rgba(11,17,32,0.85);
-      border-bottom: 1px solid var(--border);
+      z-index: 20;
+      padding: 18px 0;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(247, 241, 231, 0.72);
+      border-bottom: 1px solid rgba(29, 27, 25, 0.06);
+    }
+
+    .site-nav-inner {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 24px;
-      height: 60px;
+      gap: 16px;
     }
 
-    .nav-logo {
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(232, 110, 55, 0.22);
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      color: var(--text);
+      gap: 12px;
     }
 
-    .nav-logo img {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
+    .nav-link {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 999px;
+    }
+
+    .nav-link:hover { background: rgba(255, 255, 255, 0.55); }
+
+    .nav-cta,
+    .primary-button,
+    .secondary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-cta,
+    .primary-button {
+      background: var(--accent);
+      color: #fff7ef;
+      box-shadow: 0 16px 32px rgba(232, 110, 55, 0.22);
     }
 
     .nav-cta {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 8px 18px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: opacity 0.15s;
+      padding: 12px 18px;
+      font-size: 0.94rem;
     }
 
-    .nav-cta:hover { opacity: 0.85; }
+    .primary-button {
+      padding: 16px 26px;
+      min-height: 56px;
+    }
 
-    /* ── HERO ── */
+    .secondary-button {
+      min-height: 56px;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(29, 27, 25, 0.1);
+      color: var(--text);
+    }
+
+    .nav-cta:hover,
+    .primary-button:hover,
+    .secondary-button:hover {
+      transform: translateY(-2px);
+    }
+
     .hero {
+      padding: 54px 0 72px;
+    }
+
+    .hero-card {
       position: relative;
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 24px 60px;
       overflow: hidden;
+      background: var(--paper);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: var(--shadow);
+      border-radius: 38px;
+      padding: 34px;
     }
 
-    .hero-glow {
+    .hero-card::before {
+      content: "";
       position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
+      inset: 0;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(232, 110, 55, 0.12), transparent 22%),
+        radial-gradient(circle at 90% 12%, rgba(31, 92, 71, 0.12), transparent 24%);
       pointer-events: none;
-      z-index: 0;
     }
 
-    .hero-glow-1 {
-      width: 600px; height: 600px;
-      background: rgba(129,140,248,0.18);
-      top: -100px; left: -160px;
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 34px;
+      align-items: center;
     }
 
-    .hero-glow-2 {
-      width: 500px; height: 500px;
-      background: rgba(167,139,250,0.14);
-      bottom: -80px; right: -120px;
-    }
-
-    .hero-content { position: relative; z-index: 1; max-width: 680px; }
-
-    .hero-badges {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .hero-badge {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(129,140,248,0.12);
-      border: 1px solid rgba(129,140,248,0.3);
-      color: var(--accent);
-      border-radius: 99px;
-      padding: 5px 14px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      color: var(--forest);
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 22px;
     }
 
-    .hero-badge.green {
-      background: rgba(52,211,153,0.1);
-      border-color: rgba(52,211,153,0.3);
-      color: #34d399;
-    }
-
-    .hero-icon {
-      width: 96px;
-      height: 96px;
-      border-radius: 22px;
-      margin: 0 auto 28px;
-      display: block;
-      box-shadow: 0 0 40px rgba(129,140,248,0.35);
+    h1,
+    h2 {
+      margin: 0;
+      letter-spacing: -0.04em;
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 7vw, 4rem);
-      font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
+      font-family: "Fraunces", serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 0.94;
+      max-width: 9ch;
     }
 
-    .hero h1 span {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+    .hero h1 span { color: var(--accent-strong); }
 
-    .hero-sub {
-      font-size: 1.15rem;
+    .hero-copy {
+      font-size: 1.1rem;
       color: var(--muted);
-      max-width: 500px;
-      margin: 0 auto 40px;
+      max-width: 520px;
+      margin: 22px 0 28px;
     }
 
     .hero-actions {
       display: flex;
-      gap: 14px;
-      justify-content: center;
       flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
     }
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
+    .hero-notes {
+      display: flex;
+      flex-wrap: wrap;
       gap: 10px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-      border-radius: 14px;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 8px 30px rgba(129,140,248,0.35);
-      transition: transform 0.15s, box-shadow 0.15s;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(129,140,248,0.45);
-    }
-
-    .btn-secondary {
+    .note-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: border-color 0.15s, background 0.15s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent);
-      background: rgba(129,140,248,0.07);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 32px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 56px;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-    }
-
-    .stat { text-align: center; }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--accent);
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.66);
+      border: 1px solid rgba(29, 27, 25, 0.08);
       color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    /* ── SECTION ── */
-    section { padding: 96px 24px; }
-
-    .section-label {
-      text-align: center;
-      font-size: 0.78rem;
+      font-size: 0.92rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 14px;
     }
 
-    .section-title {
-      text-align: center;
-      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 14px;
+    .device-panel {
+      position: relative;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 244, 230, 0.96));
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      box-shadow: 0 28px 50px rgba(55, 38, 22, 0.12);
     }
 
-    .section-sub {
-      text-align: center;
-      color: var(--muted);
-      max-width: 480px;
-      margin: 0 auto 56px;
-      font-size: 1.05rem;
+    .device-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto 12% -18px 12%;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(55, 38, 22, 0.12);
+      filter: blur(24px);
+      z-index: -1;
     }
 
-    /* ── MODES GRID ── */
-    .modes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 20px;
-      max-width: 1080px;
+    .phone {
+      background: #1f1b18;
+      border-radius: 34px;
+      padding: 12px;
+      width: min(100%, 330px);
       margin: 0 auto;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
     }
 
-    .mode-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px;
-      transition: border-color 0.2s, transform 0.2s;
+    .phone-screen {
+      position: relative;
+      overflow: hidden;
+      border-radius: 26px;
+      background:
+        radial-gradient(circle at top left, rgba(255, 184, 146, 0.42), transparent 26%),
+        linear-gradient(180deg, #fdf6ec 0%, #f8e7d5 100%);
+      min-height: 620px;
+      padding: 22px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
 
-    .mode-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-    }
-
-    .mode-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: rgba(129,140,248,0.12);
+    .phone-topbar {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      font-size: 1.4rem;
-      color: var(--accent);
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--text);
     }
 
-    .mode-title {
-      font-size: 1.1rem;
+    .phone-status {
+      display: inline-flex;
+      gap: 6px;
+      color: rgba(29, 27, 25, 0.72);
+    }
+
+    .phone-card {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      border-radius: 24px;
+      padding: 18px;
+    }
+
+    .phone-label {
+      color: var(--muted);
+      font-size: 0.82rem;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       margin-bottom: 8px;
     }
 
-    .mode-desc {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .mode-tag {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 99px;
-      background: rgba(129,140,248,0.12);
-      color: var(--accent);
-    }
-
-    /* ── FEATURES ── */
-    .features-alt {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .features-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 32px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .feature-item { text-align: center; }
-
-    .feature-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: rgba(129,140,248,0.1);
+    .plate-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin: 0 auto 14px;
-      font-size: 1.4rem;
-      color: var(--accent);
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 14px;
     }
 
-    .feature-title {
-      font-size: 1rem;
+    .plate {
+      min-width: 92px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: #ffffff;
+      font-size: 1.7rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      box-shadow: inset 0 0 0 1px rgba(29, 27, 25, 0.08);
+      text-align: center;
+    }
+
+    .plate-city {
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .choice {
+      padding: 13px 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(29, 27, 25, 0.08);
       font-weight: 700;
+    }
+
+    .choice.highlight {
+      background: var(--accent-soft);
+      border-color: rgba(232, 110, 55, 0.28);
+      color: var(--accent-strong);
+    }
+
+    .progress-line {
+      position: relative;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(29, 27, 25, 0.08);
+      overflow: hidden;
+      margin-top: 14px;
+    }
+
+    .progress-line span {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 72%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--forest), #53ad89);
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .mini-stat {
+      padding: 14px 12px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      text-align: center;
+      border: 1px solid rgba(29, 27, 25, 0.08);
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.25rem;
+      line-height: 1;
       margin-bottom: 6px;
     }
 
-    .feature-desc {
-      font-size: 0.875rem;
+    .mini-stat span {
       color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
     }
 
-    /* ── ACHIEVEMENTS ── */
-    .achievements-grid {
+    .section {
+      padding: 84px 0;
+    }
+
+    .section-header {
+      max-width: 670px;
+      margin-bottom: 32px;
+    }
+
+    .section-kicker {
+      color: var(--accent-strong);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2rem, 4.8vw, 3.6rem);
+      line-height: 0.98;
+      margin-bottom: 14px;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      font-size: 1.04rem;
+      max-width: 58ch;
+      margin: 0;
+    }
+
+    .quick-strip {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      max-width: 960px;
-      margin: 0 auto;
+      margin-top: 26px;
     }
 
-    .ach-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px 20px;
+    .quick-item {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(55, 38, 22, 0.05);
+    }
+
+    .quick-item i {
+      font-size: 1.25rem;
+      color: var(--accent-strong);
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .quick-item h3,
+    .step-card h3,
+    .benefit-card h3,
+    .audience-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.04rem;
+      letter-spacing: -0.02em;
+    }
+
+    .quick-item p,
+    .step-card p,
+    .benefit-card p,
+    .audience-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .steps-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.88fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .step-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .step-card,
+    .benefit-card,
+    .audience-card {
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(55, 38, 22, 0.05);
+    }
+
+    .step-top {
       display: flex;
       align-items: center;
       gap: 14px;
+      margin-bottom: 10px;
     }
 
-    .ach-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 11px;
-      background: rgba(129,140,248,0.1);
-      display: flex;
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .ach-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-
-    .ach-desc {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    /* ── CTA BOTTOM ── */
-    .cta-section {
-      text-align: center;
-      padding: 100px 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-glow {
-      position: absolute;
-      width: 700px; height: 700px;
-      background: rgba(129,140,248,0.1);
-      border-radius: 50%;
-      filter: blur(100px);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-
-    .cta-section h2 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-      position: relative;
     }
 
-    .cta-section p {
+    .mode-preview {
+      background: linear-gradient(180deg, rgba(255, 253, 248, 0.88), rgba(255, 244, 230, 0.96));
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 96px;
+    }
+
+    .preview-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 20px;
+    }
+
+    .preview-chip {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      font-size: 0.86rem;
+      font-weight: 700;
       color: var(--muted);
-      font-size: 1.1rem;
-      margin-bottom: 36px;
-      position: relative;
     }
 
-    .appstore-badge {
-      display: inline-block;
-      position: relative;
-      transition: transform 0.15s;
+    .preview-stack {
+      display: grid;
+      gap: 12px;
     }
 
-    .appstore-badge:hover { transform: scale(1.03); }
-    .appstore-badge img { height: 54px; }
+    .preview-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      font-weight: 700;
+    }
 
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 24px;
+    .preview-row strong {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .preview-row span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .benefits-grid,
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .benefit-card strong {
+      display: block;
+      font-size: 2.2rem;
+      line-height: 1;
+      margin-bottom: 14px;
+      letter-spacing: -0.05em;
+      color: var(--forest);
+    }
+
+    .band {
+      padding: 26px 28px;
+      background: #1f5c47;
+      color: #f5eee2;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .band p {
+      margin: 0;
+      max-width: 56ch;
+      color: rgba(245, 238, 226, 0.8);
+    }
+
+    .band strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-panel {
+      padding: 38px;
+      border-radius: 38px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 224, 208, 0.65), transparent 26%),
+        linear-gradient(180deg, #fff9f2 0%, #fff1e1 100%);
+      border: 1px solid rgba(29, 27, 25, 0.08);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta-panel h2 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2rem, 5vw, 3.7rem);
+      line-height: 0.95;
+      margin-bottom: 12px;
+    }
+
+    .cta-panel p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 46ch;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      background: #111111;
+      padding: 6px;
+      box-shadow: 0 18px 36px rgba(17, 17, 17, 0.16);
+    }
+
+    .store-badge img {
+      height: 56px;
+      width: auto;
+    }
+
+    .cta-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+
+    .site-footer {
+      padding: 34px 0 46px;
+    }
+
+    .footer-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 16px;
-      max-width: 1080px;
-      margin: 0 auto;
-      font-size: 0.85rem;
-      color: var(--muted);
+      gap: 18px;
+      padding: 18px 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(29, 27, 25, 0.08);
     }
 
-    footer a {
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .footer-brand img {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+    }
+
+    .footer-meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
       color: var(--muted);
       text-decoration: none;
-      transition: color 0.15s;
+      font-weight: 700;
     }
 
-    footer a:hover { color: var(--accent); }
+    .footer-links a:hover { color: var(--accent-strong); }
 
-    .footer-links { display: flex; gap: 20px; }
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .steps-layout,
+      .cta-panel {
+        grid-template-columns: 1fr;
+      }
 
-    @media (max-width: 600px) {
-      .hero-stats { gap: 20px; }
-      footer { flex-direction: column; text-align: center; }
-      .footer-links { justify-content: center; }
+      .mode-preview { position: static; }
+
+      .quick-strip,
+      .benefits-grid,
+      .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-nav { padding: 14px 0; }
+
+      .nav-links .nav-link { display: none; }
+
+      .hero { padding-top: 26px; }
+
+      .hero-card,
+      .cta-panel {
+        padding: 24px;
+        border-radius: 28px;
+      }
+
+      .phone-screen { min-height: 560px; }
+
+      .quick-strip,
+      .benefits-grid,
+      .audience-grid,
+      .choice-grid,
+      .mini-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .band,
+      .footer-card {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page-shell,
+      .site-nav-inner {
+        width: min(calc(100% - 20px), var(--max));
+      }
+
+      .brand span:last-child {
+        max-width: 110px;
+        line-height: 1.1;
+      }
+
+      .nav-cta {
+        padding: 11px 15px;
+        font-size: 0.88rem;
+      }
+
+      .hero h1 { font-size: clamp(2.5rem, 13vw, 4rem); }
+
+      .primary-button,
+      .secondary-button {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav>
-  <a class="nav-logo" href="#">
-    <img src="../icon-192.png" alt="81 İl Plaka" />
-    81 İl Plaka
-  </a>
-  <a class="nav-cta" href="#indir">İndir</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-glow hero-glow-1"></div>
-  <div class="hero-glow hero-glow-2"></div>
-
-  <div class="hero-content">
-    <div class="hero-badges">
-      <span class="hero-badge">🇹🇷 iOS Uygulaması</span>
-      <span class="hero-badge green"><i class="bi bi-check-circle-fill"></i> Ücretsiz &amp; Reklamsız</span>
-    </div>
-
-    <img class="hero-icon" src="../icon-512.png" alt="Uygulama simgesi" />
-
-    <h1>Türkiye'nin<br /><span>81 plakasını</span><br />öğren</h1>
-
-    <p class="hero-sub">
-      Flashcard'dan hız turuna beş farklı quiz modu. İnternet gerekmez.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn-primary" href="#indir">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        App Store'dan İndir
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="#ust">
+        <img src="../icon-192.png" alt="81 Il Plaka uygulama simgesi" />
+        <span>81 Il Plaka</span>
       </a>
-      <a class="btn-secondary" href="#modlar">Modlara bak ↓</a>
-    </div>
 
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-number">81</span>
-        <span class="stat-label">İl</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">5</span>
-        <span class="stat-label">Quiz Modu</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">25+</span>
-        <span class="stat-label">Başarım</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">0 ₺</span>
-        <span class="stat-label">Reklamsız</span>
+      <div class="nav-links">
+        <a class="nav-link" href="#nasil-calisir">Nasil calisir</a>
+        <a class="nav-link" href="#neden">Neden bu uygulama</a>
+        <a class="nav-link" href="#kimler-icin">Kimler icin</a>
+        <a class="nav-cta" href="#indir">Indir</a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- MODLAR -->
-<section id="modlar">
-  <p class="section-label">Quiz Modları</p>
-  <h2 class="section-title">Her öğrenme stiline bir mod</h2>
-  <p class="section-sub">Yeni başlayanlardan hız meraklılarına beş farklı mod.</p>
+  <main id="ust">
+    <section class="hero">
+      <div class="page-shell">
+        <div class="hero-card">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">
+                <i class="bi bi-stars"></i>
+                iPhone icin sade quiz deneyimi
+              </div>
 
-  <div class="modes-grid">
+              <h1>Plaka kodlarini <span>karistirmadan</span> ogren.</h1>
 
-    <div class="mode-card">
-      <div class="mode-icon"><i class="bi bi-card-text"></i></div>
-      <div class="mode-title">Flashcard</div>
-      <div class="mode-desc">Plaka kodunu gör, ilin adını düşün. Klasik ezber kartı deneyimi.</div>
-      <span class="mode-tag">Başlangıç</span>
-    </div>
+              <p class="hero-copy">
+                81 Il Plaka, uygulamayi acan birinin saniyeler icinde ne yapacagini
+                anladigi, dikkat dagitmayan bir ogrenme deneyimi sunar. Modunu sec,
+                ilk turun hemen baslasin.
+              </p>
 
-    <div class="mode-card">
-      <div class="mode-icon"><i class="bi bi-pencil-square"></i></div>
-      <div class="mode-title">Klasik Quiz</div>
-      <div class="mode-desc">İl adını klavyeyle yaz. Türkçe karakter farkı gözetilmez.</div>
-      <span class="mode-tag">Yazarak öğren</span>
-    </div>
+              <div class="hero-actions">
+                <a class="primary-button" href="#indir">
+                  <i class="bi bi-apple"></i>
+                  App Store'a git
+                </a>
+                <a class="secondary-button" href="#nasil-calisir">
+                  <i class="bi bi-play-circle"></i>
+                  Nasil calistigini gor
+                </a>
+              </div>
 
-    <div class="mode-card">
-      <div class="mode-icon"><i class="bi bi-check2-circle"></i></div>
-      <div class="mode-title">Çoktan Seçmeli</div>
-      <div class="mode-desc">Dört şık, bir doğru cevap. Hızlı tarama için ideal.</div>
-      <span class="mode-tag">Pratik</span>
-    </div>
+              <div class="hero-notes">
+                <span class="note-pill"><i class="bi bi-wifi-off"></i> Offline</span>
+                <span class="note-pill"><i class="bi bi-badge-ad"></i> Reklamsiz</span>
+                <span class="note-pill"><i class="bi bi-lightning-charge"></i> 1 dakikada basla</span>
+              </div>
+            </div>
 
-    <div class="mode-card">
-      <div class="mode-icon"><i class="bi bi-lightning-charge-fill"></i></div>
-      <div class="mode-title">Hız Turu</div>
-      <div class="mode-desc">60 saniyede kaç plaka tanıyabilirsin? Yüksek skoru kır.</div>
-      <span class="mode-tag">Rekabetçi</span>
-    </div>
+            <div class="device-panel">
+              <div class="phone">
+                <div class="phone-screen">
+                  <div class="phone-topbar">
+                    <span>09:41</span>
+                    <span class="phone-status">
+                      <i class="bi bi-reception-4"></i>
+                      <i class="bi bi-wifi"></i>
+                      <i class="bi bi-battery-full"></i>
+                    </span>
+                  </div>
 
-    <div class="mode-card">
-      <div class="mode-icon"><i class="bi bi-trophy-fill"></i></div>
-      <div class="mode-title">Sıralı Mod</div>
-      <div class="mode-desc">81 ilin tamamını sırayla geç, süren kayıt altına alınsın.</div>
-      <span class="mode-tag">İleri Düzey</span>
-    </div>
+                  <div class="phone-card">
+                    <div class="phone-label">Bugunun hizli turu</div>
+                    <div class="plate-row">
+                      <div class="plate">34</div>
+                      <div>
+                        <div class="plate-city">Bu plaka hangi ile ait?</div>
+                        <div style="color: var(--muted); font-size: 0.92rem; margin-top: 4px;">Bir dokunusla cevapla, akisini bozma.</div>
+                      </div>
+                    </div>
 
-    <div class="mode-card">
-      <div class="mode-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
-      <div class="mode-title">Eşleştirme</div>
-      <div class="mode-desc">Plakaları ve şehirleri kartları eşleştirerek öğren.</div>
-      <span class="mode-tag">Görsel</span>
-    </div>
+                    <div class="choice-grid">
+                      <div class="choice">Ankara</div>
+                      <div class="choice highlight">Istanbul</div>
+                      <div class="choice">Izmir</div>
+                      <div class="choice">Bursa</div>
+                    </div>
+                  </div>
 
-  </div>
-</section>
+                  <div class="phone-card">
+                    <div class="phone-label">Ilerleme</div>
+                    <div style="display:flex; justify-content:space-between; gap:12px; align-items:center;">
+                      <strong style="font-size:1.05rem;">Bugun 18 dogru cevap</strong>
+                      <span style="color: var(--muted); font-weight: 700;">%72 tamamlandi</span>
+                    </div>
+                    <div class="progress-line"><span></span></div>
+                  </div>
 
-<!-- ÖZELLİKLER -->
-<section class="features-alt">
-  <p class="section-label">Özellikler</p>
-  <h2 class="section-title">Sade, odaklı, etkili</h2>
-  <p class="section-sub">Reklam yok, abonelik yok, sadece öğrenme.</p>
+                  <div class="mini-stats">
+                    <div class="mini-stat">
+                      <strong>5</strong>
+                      <span>Mod</span>
+                    </div>
+                    <div class="mini-stat">
+                      <strong>81</strong>
+                      <span>Sehir</span>
+                    </div>
+                    <div class="mini-stat">
+                      <strong>0 TL</strong>
+                      <span>Ucretsiz</span>
+                    </div>
+                  </div>
 
-  <div class="features-list">
+                  <div class="phone-card">
+                    <div class="phone-label">Kisa onboarding</div>
+                    <div style="display:grid; gap:12px;">
+                      <div class="preview-row">
+                        <strong>1. Modunu sec</strong>
+                        <span>Flashcard / Quiz</span>
+                      </div>
+                      <div class="preview-row">
+                        <strong>2. Hemen basla</strong>
+                        <span>Hesap gerekmez</span>
+                      </div>
+                      <div class="preview-row">
+                        <strong>3. Ilerlemeyi gor</strong>
+                        <span>Basit istatistikler</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="feature-item">
-      <div class="feature-icon"><i class="bi bi-wifi-off"></i></div>
-      <div class="feature-title">Offline Çalışır</div>
-      <div class="feature-desc">İnternet bağlantısına ihtiyaç duymaz.</div>
-    </div>
+        <div class="quick-strip">
+          <article class="quick-item">
+            <i class="bi bi-compass"></i>
+            <h3>Yol gosterir</h3>
+            <p>Ilk ekran, kullaniciyi kararsiz birakmadan dogrudan bir ogrenme akisina sokar.</p>
+          </article>
+          <article class="quick-item">
+            <i class="bi bi-phone"></i>
+            <h3>Tek elde rahat</h3>
+            <p>Buyuk dokunma alanlari ve net hiyerarsi sayesinde mobilde hizli hissedilir.</p>
+          </article>
+          <article class="quick-item">
+            <i class="bi bi-journal-check"></i>
+            <h3>Odak dagitmaz</h3>
+            <p>Gereksiz metin, kalabalik ekranlar ve karmasik onboarding adimlari yok.</p>
+          </article>
+          <article class="quick-item">
+            <i class="bi bi-rocket-takeoff"></i>
+            <h3>Hemen anlasilir</h3>
+            <p>Uygulamanin ne sundugu ve nasil kullanilacagi ilk bakista net sekilde gorulur.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <div class="feature-item">
-      <div class="feature-icon"><i class="bi bi-bar-chart-fill"></i></div>
-      <div class="feature-title">Detaylı İstatistik</div>
-      <div class="feature-desc">Her ilin doğru/yanlış oranı, seriler, günlük kayıtlar.</div>
-    </div>
+    <section class="section" id="nasil-calisir">
+      <div class="page-shell">
+        <div class="section-header">
+          <div class="section-kicker">Nasil calisir</div>
+          <h2 class="section-title">Uc adimlik net bir baslangic.</h2>
+          <p class="section-copy">
+            Uygulamayi ac, sana uygun modu sec ve kisa tekrarlarla plaka kodlarini
+            kalici hale getir. Her sey hizli baslaman icin sade tutuldu.
+          </p>
+        </div>
 
-    <div class="feature-item">
-      <div class="feature-icon"><i class="bi bi-bell-fill"></i></div>
-      <div class="feature-title">Günlük Hatırlatma</div>
-      <div class="feature-desc">Seçtiğin saatte bildirim al, seriyi koru.</div>
-    </div>
+        <div class="steps-layout">
+          <div class="step-list">
+            <article class="step-card">
+              <div class="step-top">
+                <span class="step-number">01</span>
+                <h3>Modunu sec</h3>
+              </div>
+              <p>
+                Flashcard ile temeli kur, coktan secmeli ile hizlan, hiz turu ile
+                refleksini test et. Sana uygun tempo neyse oradan baslayabilirsin.
+              </p>
+            </article>
 
-    <div class="feature-item">
-      <div class="feature-icon"><i class="bi bi-award-fill"></i></div>
-      <div class="feature-title">Başarımlar</div>
-      <div class="feature-desc">25'ten fazla rozet kazan, ilerlemeyi takip et.</div>
-    </div>
+            <article class="step-card">
+              <div class="step-top">
+                <span class="step-number">02</span>
+                <h3>Turunu hemen tamamla</h3>
+              </div>
+              <p>
+                Hesap acmadan, uzun ayarlarla oyalanmadan ilk soruya gec. Acilis
+                deneyimi kisa oldugu icin tekrar yapmak da kolaylasir.
+              </p>
+            </article>
 
-    <div class="feature-item">
-      <div class="feature-icon"><i class="bi bi-moon-stars-fill"></i></div>
-      <div class="feature-title">Tam Karanlık Tema</div>
-      <div class="feature-desc">Göz yormayan karanlık tasarım.</div>
-    </div>
+            <article class="step-card">
+              <div class="step-top">
+                <span class="step-number">03</span>
+                <h3>Ilerlemeni hisset</h3>
+              </div>
+              <p>
+                Basit ilerleme gostergeleri sayesinde ne kadar yol aldigini gor ve
+                eksik kaldigin plakalara tekrar don.
+              </p>
+            </article>
+          </div>
 
-    <div class="feature-item">
-      <div class="feature-icon"><i class="bi bi-share-fill"></i></div>
-      <div class="feature-title">Skor Paylaşımı</div>
-      <div class="feature-desc">Hız turu veya sıralı mod sonucunu anında paylaş.</div>
-    </div>
+          <aside class="mode-preview">
+            <div class="section-kicker">Uygulama akisi</div>
+            <h2 style="font-size: 2rem; margin-bottom: 10px;">Karmasik degil, kullanisli.</h2>
+            <p class="section-copy">
+              Plaka ezberi icin ihtiyacin olan her sey tek akista: dogru modu sec,
+              sorulari cevapla ve ilerlemeni takip et.
+            </p>
 
-  </div>
-</section>
+            <div class="preview-chip-row">
+              <span class="preview-chip">Flashcard</span>
+              <span class="preview-chip">Klasik Quiz</span>
+              <span class="preview-chip">Coktan Secmeli</span>
+              <span class="preview-chip">Hiz Turu</span>
+            </div>
 
-<!-- EKRAN GÖRÜNTÜLERİ — ekran görüntüleri hazır olduğunda display:none kaldır -->
-<section id="screenshots" style="display:none">
-  <p class="section-label">Ekran Görüntüleri</p>
-  <h2 class="section-title">Uygulamaya göz at</h2>
-  <p class="section-sub">Kaydırarak incele.</p>
-  <!-- screenshots/screen1.png … screen5.png olarak ekle, sonra display:none kaldır -->
-</section>
+            <div class="preview-stack">
+              <div class="preview-row">
+                <strong>Hemen anlasilir</strong>
+                <span>Ne yapacagini bilirsin</span>
+              </div>
+              <div class="preview-row">
+                <strong>Kolay baslangic</strong>
+                <span>Beklemeden oyuna gir</span>
+              </div>
+              <div class="preview-row">
+                <strong>Tek adim</strong>
+                <span>Indir ve hemen dene</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-<!-- BAŞARIMLAR -->
-<section style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-  <p class="section-label">Başarımlar</p>
-  <h2 class="section-title">Rozet kazan, seriyi koru</h2>
-  <p class="section-sub">25'ten fazla başarımla ilerlemeyi takip et.</p>
+    <section class="section" id="neden">
+      <div class="page-shell">
+        <div class="section-header">
+          <div class="section-kicker">Neden bu uygulama</div>
+          <h2 class="section-title">Plaka ogrenmeyi hafif ve duzenli tutar.</h2>
+          <p class="section-copy">
+            81 Il Plaka, dikkat dagitmayan arayuzu ve hizli turlari sayesinde
+            plaka kodlarini ezberlemeyi daha kolay ve daha duzenli hale getirir.
+          </p>
+        </div>
 
-  <div class="achievements-grid">
-    <div class="ach-card">
-      <div class="ach-icon"><i class="bi bi-fire"></i></div>
-      <div>
-        <div class="ach-title">Isınma Turu</div>
-        <div class="ach-desc">İlk quiz'ini tamamla</div>
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <strong>81</strong>
+            <h3>Butun sehirler tek yerde</h3>
+            <p>Turkiye'nin tum plaka kodlari ayni deneyimde, daginik icerik hissi olmadan sunulur.</p>
+          </article>
+
+          <article class="benefit-card">
+            <strong>5</strong>
+            <h3>Farkli ogrenme modu</h3>
+            <p>Tek tip test yerine farkli tempolara uygun modlar ile kullanici ilgisi daha uzun surer.</p>
+          </article>
+
+          <article class="benefit-card">
+            <strong>0</strong>
+            <h3>Gereksiz bariyer</h3>
+            <p>Reklam yok, abonelik yok, hesap zorlugu yok. Ac, ogren ve istedigin zaman geri don.</p>
+          </article>
+        </div>
+
+        <div class="band">
+          <div>
+            <strong>Kisa tekrarlar, net ilerleme, daha az unutma.</strong>
+            <p>
+              Her gun birkac dakikalik tekrar bile yeterli. Uygulama seni yormadan
+              tekrar ettirir, boylece bilgiyi daginik degil duzenli sekilde toplarsin.
+            </p>
+          </div>
+          <a class="secondary-button" href="#indir" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.16); color: #f5eee2;">
+            <i class="bi bi-arrow-down-circle"></i>
+            CTA'ya git
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kimler-icin">
+      <div class="page-shell">
+        <div class="section-header">
+          <div class="section-kicker">Kimler icin</div>
+          <h2 class="section-title">Ihtiyaci olan herkes icin hizli bir yardimci.</h2>
+          <p class="section-copy">
+            Okulda, yolda, bos bir anda ya da sadece meraktan. Kisa kullanim
+            senaryolarina uygun oldugu icin farkli ihtiyaclara rahatca uyum saglar.
+          </p>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card">
+            <h3>Ogrenciler</h3>
+            <p>Sinav oncesi ya da genel kultur amacli, kisa araliklarda hizli tekrar yapabilir.</p>
+          </article>
+
+          <article class="audience-card">
+            <h3>Surucu adaylari</h3>
+            <p>Plaka kodlarini akilda tutmak isteyenler, net ve tekrar edilebilir turlarla pratik yapar.</p>
+          </article>
+
+          <article class="audience-card">
+            <h3>Merakli kullanicilar</h3>
+            <p>Bilgi yarismasi sevenler ya da kendini test etmek isteyenler icin hafif ve eglenceli bir arac olur.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="indir">
+      <div class="page-shell">
+        <div class="cta-panel">
+          <div>
+            <div class="section-kicker">Indir</div>
+            <h2>Bir dakikada basla, duzenli sekilde ilerle.</h2>
+            <p>
+              81 Il Plaka, uygulamayi ilk kez acan birinin bile zorlanmadan kullanabilecegi
+              kadar sade. Indirdikten sonra beklemeden ilk tura gecip hangi plakalarda
+              eksigin oldugunu hemen gorebilirsin.
+            </p>
+
+            <div class="cta-actions">
+              <a class="primary-button" href="https://apps.apple.com/tr/app/81-il-plaka/id_REPLACE_ME" target="_blank" rel="noopener">
+                <i class="bi bi-apple"></i>
+                App Store'da ac
+              </a>
+              <a class="secondary-button" href="#ust">
+                <i class="bi bi-arrow-up-right-circle"></i>
+                Basa don
+              </a>
+            </div>
+
+            <div class="cta-note">
+              App Store baglantisi hazir oldugunda `id_REPLACE_ME` degerini guncelle.
+            </div>
+          </div>
+
+          <a class="store-badge" href="https://apps.apple.com/tr/app/81-il-plaka/id_REPLACE_ME" target="_blank" rel="noopener" aria-label="App Store'dan indir">
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="App Store'dan indir"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell">
+      <div class="footer-card">
+        <div>
+          <div class="footer-brand">
+            <img src="../icon-192.png" alt="81 Il Plaka simgesi" />
+            <span>81 Il Plaka</span>
+          </div>
+          <div class="footer-meta">(c) 2026 TuDePi. Sade, hizli ve odakli bir ogrenme deneyimi.</div>
+        </div>
+
+        <div class="footer-links">
+          <a href="../privacy-policy.html">Gizlilik Politikasi</a>
+          <a href="https://github.com/TuDePi" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </div>
-    <div class="ach-card">
-      <div class="ach-icon"><i class="bi bi-lightning-charge-fill"></i></div>
-      <div>
-        <div class="ach-title">Hız Ustası</div>
-        <div class="ach-desc">Hız turunda 30+ doğru</div>
-      </div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-icon"><i class="bi bi-trophy-fill"></i></div>
-      <div>
-        <div class="ach-title">Sıralı Mod Kralı</div>
-        <div class="ach-desc">30/30 mükemmel sıralı</div>
-      </div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-icon"><i class="bi bi-calendar-check-fill"></i></div>
-      <div>
-        <div class="ach-title">Haftalık Seri</div>
-        <div class="ach-desc">7 gün üst üste çalış</div>
-      </div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-icon"><i class="bi bi-map-fill"></i></div>
-      <div>
-        <div class="ach-title">Haritacı</div>
-        <div class="ach-desc">81 ilin tamamını gör</div>
-      </div>
-    </div>
-    <div class="ach-card">
-      <div class="ach-icon"><i class="bi bi-stopwatch-fill"></i></div>
-      <div>
-        <div class="ach-title">Yıldırım Turu</div>
-        <div class="ach-desc">Sıralı modu 60sn altında bitir</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ALT CTA -->
-<section class="cta-section" id="indir">
-  <div class="cta-glow"></div>
-  <h2>Hemen başla, ücretsiz.</h2>
-  <p>Reklam yok, abonelik yok, hesap açmak yok.</p>
-  <!-- TODO: App Store onayı gelince href içindeki id_REPLACE_ME kısmını güncelle -->
-  <a class="appstore-badge" href="https://apps.apple.com/tr/app/81-il-plaka/id_REPLACE_ME" target="_blank" rel="noopener">
-    <img
-      src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-      alt="App Store'dan İndir"
-    />
-  </a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <span>© 2026 TuDePi — 81 İl Plaka</span>
-  <div class="footer-links">
-    <a href="../privacy-policy.html">Gizlilik Politikası</a>
-    <a href="https://github.com/TuDePi" target="_blank" rel="noopener">GitHub</a>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
