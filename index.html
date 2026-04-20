@@ -14,7 +14,7 @@
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="TuDePi" />
-  <meta name="theme-color" content="#f7f1e7" />
+  <meta name="theme-color" content="#0f172a" />
   <link rel="canonical" href="https://81ilplaka.com/" />
   <link rel="alternate" hreflang="tr-TR" href="https://81ilplaka.com/" />
 
@@ -132,19 +132,22 @@
     *, *::before, *::after { box-sizing: border-box; }
 
     :root {
-      --bg: #f7f1e7;
-      --bg-soft: #fffaf3;
-      --paper: rgba(255, 250, 243, 0.82);
-      --card: #fffdf8;
-      --card-strong: #fff7ea;
-      --text: #1d1b19;
-      --muted: #655f58;
-      --line: rgba(29, 27, 25, 0.12);
-      --accent: #e86e37;
-      --accent-strong: #bb4f20;
-      --accent-soft: #ffe0d0;
-      --forest: #1f5c47;
-      --shadow: 0 22px 60px rgba(101, 67, 33, 0.12);
+      --bg: #0f172a;
+      --bg-soft: #1e293b;
+      --paper: rgba(30, 41, 59, 0.72);
+      --card: rgba(30, 41, 59, 0.72);
+      --card-strong: rgba(51, 65, 85, 0.7);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --line: rgba(226, 232, 240, 0.1);
+      --accent: #3b82f6;
+      --accent-strong: #60a5fa;
+      --accent-soft: rgba(59, 130, 246, 0.16);
+      --purple: #8b5cf6;
+      --purple-soft: rgba(139, 92, 246, 0.18);
+      --yellow: #eab308;
+      --forest: #8b5cf6;
+      --shadow: 0 22px 60px rgba(2, 6, 23, 0.45);
       --radius-lg: 32px;
       --radius-md: 22px;
       --radius-sm: 16px;
@@ -158,9 +161,9 @@
       font-family: "Manrope", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(232, 110, 55, 0.12), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(31, 92, 71, 0.12), transparent 28%),
-        linear-gradient(180deg, #fbf6ee 0%, #f5eee2 100%);
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.22), transparent 36%),
+        radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.2), transparent 30%),
+        linear-gradient(180deg, #0b1224 0%, #0f172a 100%);
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -181,8 +184,8 @@
       padding: 18px 0;
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-      background: rgba(247, 241, 231, 0.72);
-      border-bottom: 1px solid rgba(29, 27, 25, 0.06);
+      background: rgba(15, 23, 42, 0.72);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.08);
     }
 
     .site-nav-inner {
@@ -207,7 +210,7 @@
       width: 42px;
       height: 42px;
       border-radius: 12px;
-      box-shadow: 0 10px 24px rgba(232, 110, 55, 0.22);
+      box-shadow: 0 10px 24px rgba(59, 130, 246, 0.35);
     }
 
     .nav-links {
@@ -224,7 +227,7 @@
       border-radius: 999px;
     }
 
-    .nav-link:hover { background: rgba(255, 255, 255, 0.55); }
+    .nav-link:hover { background: rgba(226, 232, 240, 0.08); color: var(--text); }
 
     .nav-cta,
     .primary-button,
@@ -241,9 +244,9 @@
 
     .nav-cta,
     .primary-button {
-      background: var(--accent);
-      color: #fff7ef;
-      box-shadow: 0 16px 32px rgba(232, 110, 55, 0.22);
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      color: #ffffff;
+      box-shadow: 0 16px 32px rgba(59, 130, 246, 0.32);
     }
 
     .nav-cta {
@@ -259,8 +262,8 @@
     .secondary-button {
       min-height: 56px;
       padding: 16px 24px;
-      background: rgba(255, 255, 255, 0.58);
-      border: 1px solid rgba(29, 27, 25, 0.1);
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(226, 232, 240, 0.12);
       color: var(--text);
     }
 
@@ -278,7 +281,7 @@
       position: relative;
       overflow: hidden;
       background: var(--paper);
-      border: 1px solid rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(226, 232, 240, 0.08);
       box-shadow: var(--shadow);
       border-radius: 38px;
       padding: 34px;
@@ -289,8 +292,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 10% 15%, rgba(232, 110, 55, 0.12), transparent 22%),
-        radial-gradient(circle at 90% 12%, rgba(31, 92, 71, 0.12), transparent 24%);
+        radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.18), transparent 26%),
+        radial-gradient(circle at 90% 12%, rgba(139, 92, 246, 0.18), transparent 28%);
       pointer-events: none;
     }
 
@@ -308,9 +311,9 @@
       gap: 8px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid rgba(29, 27, 25, 0.08);
-      color: var(--forest);
+      background: rgba(234, 179, 8, 0.14);
+      border: 1px solid rgba(234, 179, 8, 0.3);
+      color: var(--yellow);
       font-size: 0.88rem;
       font-weight: 800;
       margin-bottom: 22px;
@@ -329,7 +332,13 @@
       max-width: 9ch;
     }
 
-    .hero h1 span { color: var(--accent-strong); }
+    .hero h1 span {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
 
     .hero-copy {
       font-size: 1.1rem;
@@ -357,8 +366,8 @@
       gap: 8px;
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.66);
-      border: 1px solid rgba(29, 27, 25, 0.08);
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(226, 232, 240, 0.1);
       color: var(--muted);
       font-size: 0.92rem;
       font-weight: 700;
@@ -368,9 +377,9 @@
       position: relative;
       padding: 20px;
       border-radius: var(--radius-lg);
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 244, 230, 0.96));
-      border: 1px solid rgba(29, 27, 25, 0.08);
-      box-shadow: 0 28px 50px rgba(55, 38, 22, 0.12);
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.72), rgba(15, 23, 42, 0.86));
+      border: 1px solid rgba(226, 232, 240, 0.08);
+      box-shadow: 0 28px 50px rgba(2, 6, 23, 0.5);
     }
 
     .device-panel::after {
@@ -379,13 +388,13 @@
       inset: auto 12% -18px 12%;
       height: 42px;
       border-radius: 50%;
-      background: rgba(55, 38, 22, 0.12);
-      filter: blur(24px);
+      background: rgba(59, 130, 246, 0.28);
+      filter: blur(28px);
       z-index: -1;
     }
 
     .phone {
-      background: #1f1b18;
+      background: #050a16;
       border-radius: 34px;
       padding: 12px;
       width: min(100%, 330px);
@@ -552,7 +561,7 @@
       inset: 0 auto 0 0;
       width: 72%;
       border-radius: inherit;
-      background: linear-gradient(90deg, var(--forest), #53ad89);
+      background: linear-gradient(90deg, var(--accent), var(--purple));
     }
 
     .mini-stats {
@@ -592,7 +601,7 @@
     }
 
     .section-kicker {
-      color: var(--accent-strong);
+      color: var(--yellow);
       font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 0.12em;
@@ -622,11 +631,11 @@
     }
 
     .quick-item {
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(29, 27, 25, 0.08);
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(226, 232, 240, 0.08);
       border-radius: var(--radius-md);
       padding: 20px;
-      box-shadow: 0 8px 20px rgba(55, 38, 22, 0.05);
+      box-shadow: 0 8px 20px rgba(2, 6, 23, 0.3);
     }
 
     .quick-item i {
@@ -669,11 +678,11 @@
     .step-card,
     .benefit-card,
     .audience-card {
-      background: rgba(255, 255, 255, 0.74);
-      border: 1px solid rgba(29, 27, 25, 0.08);
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(226, 232, 240, 0.08);
       border-radius: var(--radius-md);
       padding: 24px;
-      box-shadow: 0 12px 30px rgba(55, 38, 22, 0.05);
+      box-shadow: 0 12px 30px rgba(2, 6, 23, 0.3);
     }
 
     .step-top {
@@ -689,6 +698,7 @@
       border-radius: 14px;
       background: var(--accent-soft);
       color: var(--accent-strong);
+      border: 1px solid rgba(59, 130, 246, 0.3);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -696,8 +706,8 @@
     }
 
     .mode-preview {
-      background: linear-gradient(180deg, rgba(255, 253, 248, 0.88), rgba(255, 244, 230, 0.96));
-      border: 1px solid rgba(29, 27, 25, 0.08);
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.82));
+      border: 1px solid rgba(226, 232, 240, 0.08);
       border-radius: 30px;
       padding: 24px;
       box-shadow: var(--shadow);
@@ -715,8 +725,8 @@
     .preview-chip {
       padding: 9px 12px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(29, 27, 25, 0.08);
+      background: rgba(30, 41, 59, 0.72);
+      border: 1px solid rgba(226, 232, 240, 0.1);
       font-size: 0.86rem;
       font-weight: 700;
       color: var(--muted);
@@ -734,8 +744,8 @@
       gap: 12px;
       padding: 14px 16px;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(29, 27, 25, 0.08);
+      background: rgba(30, 41, 59, 0.72);
+      border: 1px solid rgba(226, 232, 240, 0.1);
       font-weight: 700;
     }
 
@@ -762,25 +772,30 @@
       line-height: 1;
       margin-bottom: 14px;
       letter-spacing: -0.05em;
-      color: var(--forest);
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
     }
 
     .band {
       padding: 26px 28px;
-      background: #1f5c47;
-      color: #f5eee2;
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      color: #ffffff;
       border-radius: 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
       margin-top: 28px;
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.28);
     }
 
     .band p {
       margin: 0;
       max-width: 56ch;
-      color: rgba(245, 238, 226, 0.8);
+      color: rgba(255, 255, 255, 0.85);
     }
 
     .band strong {
@@ -794,9 +809,10 @@
       padding: 38px;
       border-radius: 38px;
       background:
-        radial-gradient(circle at top right, rgba(255, 224, 208, 0.65), transparent 26%),
-        linear-gradient(180deg, #fff9f2 0%, #fff1e1 100%);
-      border: 1px solid rgba(29, 27, 25, 0.08);
+        radial-gradient(circle at top right, rgba(139, 92, 246, 0.22), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.2), transparent 32%),
+        linear-gradient(180deg, rgba(30, 41, 59, 0.72) 0%, rgba(15, 23, 42, 0.86) 100%);
+      border: 1px solid rgba(226, 232, 240, 0.1);
       box-shadow: var(--shadow);
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
@@ -855,11 +871,11 @@
     }
 
     .faq-item {
-      background: rgba(255, 255, 255, 0.74);
-      border: 1px solid rgba(29, 27, 25, 0.08);
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(226, 232, 240, 0.08);
       border-radius: 20px;
       padding: 0 22px;
-      box-shadow: 0 12px 30px rgba(55, 38, 22, 0.05);
+      box-shadow: 0 12px 30px rgba(2, 6, 23, 0.3);
     }
 
     .faq-item summary {
@@ -880,7 +896,7 @@
       content: "+";
       font-size: 1.4rem;
       line-height: 1;
-      color: var(--accent-strong);
+      color: var(--yellow);
       flex-shrink: 0;
     }
 
@@ -900,8 +916,8 @@
       gap: 18px;
       padding: 18px 22px;
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.58);
-      border: 1px solid rgba(29, 27, 25, 0.08);
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(226, 232, 240, 0.08);
     }
 
     .footer-brand {
@@ -934,7 +950,7 @@
       font-weight: 700;
     }
 
-    .footer-links a:hover { color: var(--accent-strong); }
+    .footer-links a:hover { color: var(--text); }
 
     @media (max-width: 1080px) {
       .hero-grid,
@@ -1009,16 +1025,16 @@
   <nav class="site-nav">
     <div class="site-nav-inner">
       <a class="brand" href="#ust">
-        <img src="icon-192.png" alt="81 Il Plaka uygulama simgesi" />
-        <span>81 Il Plaka</span>
+        <img src="icon-192.png" alt="81 İl Plaka uygulama simgesi" />
+        <span>81 İl Plaka</span>
       </a>
 
       <div class="nav-links">
-        <a class="nav-link" href="#nasil-calisir">Nasil calisir</a>
-        <a class="nav-link" href="#neden">Neden bu uygulama</a>
+        <a class="nav-link" href="#nasil-calisir">Nasıl çalışır</a>
+        <a class="nav-link" href="#neden">Özellikler</a>
         <a class="nav-link" href="#sss">SSS</a>
-        <a class="nav-link" href="#kimler-icin">Kimler icin</a>
-        <a class="nav-cta" href="#indir">Indir</a>
+        <a class="nav-link" href="#kimler-icin">Kimler için</a>
+        <a class="nav-cta" href="#indir">İndir</a>
       </div>
     </div>
   </nav>
@@ -1031,32 +1047,32 @@
             <div>
               <div class="eyebrow">
                 <i class="bi bi-stars"></i>
-                iPhone icin sade plaka kodu quiz uygulamasi
+                iPhone için sade plaka kodu quiz uygulaması
               </div>
 
-              <h1>Turkiye'nin <span>81 il plaka kodlarini</span> ogren.</h1>
+              <h1>Türkiye'nin <span>81 il plaka kodunu</span> öğren.</h1>
 
               <p class="hero-copy">
-                81 Il Plaka, Turkiye plaka kodlarini ezberlemeyi kolaylastiran sade bir
-                iPhone uygulamasidir. 81 il plaka kodlari icin flashcard, quiz ve hiz
-                turu modlari sunar; uygulamayi ac, modunu sec ve hemen basla.
+                81 İl Plaka, Türkiye plaka kodlarını ezberlemeyi kolaylaştıran sade bir
+                iPhone uygulamasıdır. Flashcard, quiz ve hız turu modlarıyla uygulamayı
+                aç, modunu seç ve hemen başla.
               </p>
 
               <div class="hero-actions">
                 <a class="primary-button" href="#indir">
                   <i class="bi bi-apple"></i>
-                  App Store'a git
+                  App Store'dan indir
                 </a>
                 <a class="secondary-button" href="#nasil-calisir">
                   <i class="bi bi-play-circle"></i>
-                  Nasil calistigini gor
+                  Nasıl çalışır?
                 </a>
               </div>
 
               <div class="hero-notes">
                 <span class="note-pill"><i class="bi bi-wifi-off"></i> Offline</span>
-                <span class="note-pill"><i class="bi bi-badge-ad"></i> Reklamsiz</span>
-                <span class="note-pill"><i class="bi bi-lightning-charge"></i> 1 dakikada basla</span>
+                <span class="note-pill"><i class="bi bi-badge-ad"></i> Reklamsız</span>
+                <span class="note-pill"><i class="bi bi-lightning-charge"></i> 1 dakikada başla</span>
               </div>
             </div>
 
@@ -1083,23 +1099,23 @@
         <div class="quick-strip">
           <article class="quick-item">
             <i class="bi bi-compass"></i>
-            <h3>Yol gosterir</h3>
-            <p>81 il plaka kodlari icin ilk ekranda ne yapman gerektigi hemen anlasilir.</p>
+            <h3>Yol gösterir</h3>
+            <p>81 il plaka kodları için ilk ekranda ne yapman gerektiği hemen anlaşılır.</p>
           </article>
           <article class="quick-item">
             <i class="bi bi-phone"></i>
             <h3>Tek elde rahat</h3>
-            <p>Buyuk dokunma alanlari ve net hiyerarsi sayesinde mobilde hizli hissedilir.</p>
+            <p>Büyük dokunma alanları ve net hiyerarşi sayesinde mobilde hızlı hissedilir.</p>
           </article>
           <article class="quick-item">
             <i class="bi bi-journal-check"></i>
-            <h3>Odak dagitmaz</h3>
-            <p>Gereksiz metin, kalabalik ekranlar ve karmasik onboarding adimlari yok.</p>
+            <h3>Odak dağıtmaz</h3>
+            <p>Gereksiz metin, kalabalık ekranlar ve karmaşık adımlar yok.</p>
           </article>
           <article class="quick-item">
             <i class="bi bi-rocket-takeoff"></i>
-            <h3>Hemen anlasilir</h3>
-            <p>Uygulamanin ne sundugu ve nasil kullanilacagi ilk bakista net sekilde gorulur.</p>
+            <h3>Hemen anlaşılır</h3>
+            <p>Uygulamanın ne sunduğu ve nasıl kullanılacağı ilk bakışta net şekilde görülür.</p>
           </article>
         </div>
       </div>
@@ -1108,11 +1124,11 @@
     <section class="section" id="nasil-calisir">
       <div class="page-shell">
         <div class="section-header">
-          <div class="section-kicker">Nasil calisir</div>
-          <h2 class="section-title">Uc adimlik net bir baslangic.</h2>
+          <div class="section-kicker">Nasıl çalışır</div>
+          <h2 class="section-title">Üç adımlık net bir başlangıç.</h2>
           <p class="section-copy">
-            Uygulamayi ac, sana uygun modu sec ve kisa tekrarlarla Turkiye'nin plaka
-            kodlarini kalici hale getir. Her sey hizli baslaman icin sade tutuldu.
+            Uygulamayı aç, sana uygun modu seç ve kısa tekrarlarla Türkiye'nin plaka
+            kodlarını kalıcı hale getir. Her şey hızlı başlaman için sade tutuldu.
           </p>
         </div>
 
@@ -1121,11 +1137,11 @@
             <article class="step-card">
               <div class="step-top">
                 <span class="step-number">01</span>
-                <h3>Modunu sec</h3>
+                <h3>Modunu seç</h3>
               </div>
               <p>
-                Flashcard ile temeli kur, coktan secmeli ile hizlan, hiz turu ile
-                refleksini test et. Sana uygun tempo neyse oradan baslayabilirsin.
+                Flashcard ile temeli kur, çoktan seçmeli ile hızlan, hız turu ile
+                refleksini test et. Sana uygun tempo neyse oradan başlayabilirsin.
               </p>
             </article>
 
@@ -1135,50 +1151,50 @@
                 <h3>Turunu hemen tamamla</h3>
               </div>
               <p>
-                Hesap acmadan, uzun ayarlarla oyalanmadan ilk soruya gec. Acilis
-                deneyimi kisa oldugu icin tekrar yapmak da kolaylasir.
+                Hesap açmadan, uzun ayarlarla oyalanmadan ilk soruya geç. Açılış
+                deneyimi kısa olduğu için tekrar yapmak da kolaylaşır.
               </p>
             </article>
 
             <article class="step-card">
               <div class="step-top">
                 <span class="step-number">03</span>
-                <h3>Ilerlemeni hisset</h3>
+                <h3>İlerlemeni hisset</h3>
               </div>
               <p>
-                Basit ilerleme gostergeleri sayesinde ne kadar yol aldigini gor ve
-                eksik kaldigin plakalara tekrar don.
+                Basit ilerleme göstergeleri sayesinde ne kadar yol aldığını gör ve
+                eksik kaldığın plakalara tekrar dön.
               </p>
             </article>
           </div>
 
           <aside class="mode-preview">
-            <div class="section-kicker">Uygulama akisi</div>
-            <h2 style="font-size: 2rem; margin-bottom: 10px;">Karmasik degil, kullanisli.</h2>
+            <div class="section-kicker">Uygulama akışı</div>
+            <h2 style="font-size: 2rem; margin-bottom: 10px;">Karmaşık değil, kullanışlı.</h2>
             <p class="section-copy">
-              Plaka ezberi icin ihtiyacin olan her sey tek akista: dogru modu sec,
-              sorulari cevapla ve ilerlemeni takip et.
+              Plaka ezberi için ihtiyacın olan her şey tek akışta: doğru modu seç,
+              soruları cevapla ve ilerlemeni takip et.
             </p>
 
             <div class="preview-chip-row">
               <span class="preview-chip">Flashcard</span>
               <span class="preview-chip">Klasik Quiz</span>
-              <span class="preview-chip">Coktan Secmeli</span>
-              <span class="preview-chip">Hiz Turu</span>
+              <span class="preview-chip">Çoktan Seçmeli</span>
+              <span class="preview-chip">Hız Turu</span>
             </div>
 
             <div class="preview-stack">
               <div class="preview-row">
-                <strong>Hemen anlasilir</strong>
-                <span>Ne yapacagini bilirsin</span>
+                <strong>Hemen anlaşılır</strong>
+                <span>Ne yapacağını bilirsin</span>
               </div>
               <div class="preview-row">
-                <strong>Kolay baslangic</strong>
-                <span>Beklemeden oyuna gir</span>
+                <strong>Kolay başlangıç</strong>
+                <span>Beklemeden başla</span>
               </div>
               <div class="preview-row">
-                <strong>Tek adim</strong>
-                <span>Indir ve hemen dene</span>
+                <strong>Tek adım</strong>
+                <span>İndir ve hemen dene</span>
               </div>
             </div>
           </aside>
@@ -1189,45 +1205,45 @@
     <section class="section" id="neden">
       <div class="page-shell">
         <div class="section-header">
-          <div class="section-kicker">Neden bu uygulama</div>
-          <h2 class="section-title">Plaka ogrenmeyi hafif ve duzenli tutar.</h2>
+          <div class="section-kicker">Özellikler</div>
+          <h2 class="section-title">Plaka öğrenmeyi hafif ve düzenli tutar.</h2>
           <p class="section-copy">
-            81 Il Plaka, dikkat dagitmayan arayuzu ve hizli turlari sayesinde
-            Turkiye'nin 81 il plaka kodlarini ogrenmeyi daha kolay ve daha duzenli hale getirir.
+            81 İl Plaka, dikkat dağıtmayan arayüzü ve hızlı turları sayesinde
+            Türkiye'nin 81 il plaka kodlarını öğrenmeyi daha kolay ve daha düzenli hale getirir.
           </p>
         </div>
 
         <div class="benefits-grid">
           <article class="benefit-card">
             <strong>81</strong>
-            <h3>Butun sehirler tek yerde</h3>
-            <p>Turkiye'nin tum il plaka kodlari ayni deneyimde, daginik icerik hissi olmadan sunulur.</p>
+            <h3>Bütün şehirler tek yerde</h3>
+            <p>Türkiye'nin tüm il plaka kodları aynı deneyimde, dağınık içerik hissi olmadan sunulur.</p>
           </article>
 
           <article class="benefit-card">
             <strong>5</strong>
-            <h3>Farkli ogrenme modu</h3>
-            <p>Tek tip test yerine farkli tempolara uygun modlar ile kullanici ilgisi daha uzun surer.</p>
+            <h3>Farklı öğrenme modu</h3>
+            <p>Tek tip test yerine farklı tempolara uygun modlar ile kullanıcı ilgisi daha uzun sürer.</p>
           </article>
 
           <article class="benefit-card">
             <strong>0</strong>
             <h3>Gereksiz bariyer</h3>
-            <p>Reklam yok, abonelik yok, hesap zorlugu yok. Ac, ogren ve istedigin zaman geri don.</p>
+            <p>Reklam yok, abonelik yok, hesap zorluğu yok. Aç, öğren ve istediğin zaman geri dön.</p>
           </article>
         </div>
 
         <div class="band">
           <div>
-            <strong>Kisa tekrarlar, net ilerleme, daha az unutma.</strong>
+            <strong>Kısa tekrarlar, net ilerleme, daha az unutma.</strong>
             <p>
-              Her gun birkac dakikalik tekrar bile yeterli. Uygulama seni yormadan
-              tekrar ettirir, boylece bilgiyi daginik degil duzenli sekilde toplarsin.
+              Her gün birkaç dakikalık tekrar bile yeterli. Uygulama seni yormadan
+              tekrar ettirir, böylece bilgiyi dağınık değil düzenli şekilde toplarsın.
             </p>
           </div>
-          <a class="secondary-button" href="#indir" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.16); color: #f5eee2;">
+          <a class="secondary-button" href="#indir" style="background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.22); color: #ffffff;">
             <i class="bi bi-arrow-down-circle"></i>
-            CTA'ya git
+            Hemen indir
           </a>
         </div>
       </div>
@@ -1237,44 +1253,44 @@
       <div class="page-shell">
         <div class="section-header">
           <div class="section-kicker">SSS</div>
-          <h2 class="section-title">81 il plaka kodlari hakkinda sik sorulan sorular.</h2>
+          <h2 class="section-title">81 il plaka kodları hakkında sık sorulan sorular.</h2>
           <p class="section-copy">
-            En cok merak edilen ayrintilari tek yerde topladik. Boylece uygulamayi
-            indirmeden once nasil calistigini ve sana uygun olup olmadigini hizla gorebilirsin.
+            En çok merak edilen ayrıntıları tek yerde topladık. Böylece uygulamayı
+            indirmeden önce nasıl çalıştığını ve sana uygun olup olmadığını hızla görebilirsin.
           </p>
         </div>
 
         <div class="faq-list">
           <details class="faq-item">
-            <summary>81 Il Plaka uygulamasi ne ise yarar?</summary>
+            <summary>81 İl Plaka uygulaması ne işe yarar?</summary>
             <p>
-              81 Il Plaka, Turkiye'nin 81 iline ait plaka kodlarini daha kolay ogrenmek
-              icin hazirlanmis bir iPhone uygulamasidir. Kisa quiz turlari ve tekrar
-              akislari sayesinde plaka kodlarini daha hizli ezberlemeye yardimci olur.
+              81 İl Plaka, Türkiye'nin 81 iline ait plaka kodlarını daha kolay öğrenmek
+              için hazırlanmış bir iPhone uygulamasıdır. Kısa quiz turları ve tekrar
+              akışları sayesinde plaka kodlarını daha hızlı ezberlemeye yardımcı olur.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Uygulama internet olmadan calisir mi?</summary>
+            <summary>Uygulama internet olmadan çalışır mı?</summary>
             <p>
-              Evet. Offline kullanim destegi sayesinde internet baglantisi olmadan da
-              plaka kodlarini tekrar edebilir, bos anlarinda hizli quiz turlari yapabilirsin.
+              Evet. Çevrimdışı kullanım desteği sayesinde internet bağlantısı olmadan da
+              plaka kodlarını tekrar edebilir, boş anlarında hızlı quiz turları yapabilirsin.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>81 il plaka kodlari hangi modlarla ogrenilir?</summary>
+            <summary>81 il plaka kodları hangi modlarla öğrenilir?</summary>
             <p>
-              Flashcard, klasik quiz, coktan secmeli ve hiz turu gibi farkli modlar
-              bulunur. Boylece ister yavas tekrar yap, ister kendini sureye karsi test et.
+              Flashcard, klasik quiz, çoktan seçmeli ve hız turu gibi farklı modlar
+              bulunur. Böylece ister yavaş tekrar yap, ister kendini süreye karşı test et.
             </p>
           </details>
 
           <details class="faq-item">
-            <summary>Uygulama ucretli mi?</summary>
+            <summary>Uygulama ücretli mi?</summary>
             <p>
-              Hayir. 81 Il Plaka ucretsizdir. Reklamsiz ve abonelik bariyeri olmayan
-              sade bir deneyim sundugu icin uygulamayi acip dogrudan kullanmaya baslayabilirsin.
+              Hayır. 81 İl Plaka ücretsizdir. Reklamsız ve abonelik bariyeri olmayan
+              sade bir deneyim sunduğu için uygulamayı açıp doğrudan kullanmaya başlayabilirsin.
             </p>
           </details>
         </div>
@@ -1284,28 +1300,28 @@
     <section class="section" id="kimler-icin">
       <div class="page-shell">
         <div class="section-header">
-          <div class="section-kicker">Kimler icin</div>
-          <h2 class="section-title">Ihtiyaci olan herkes icin hizli bir yardimci.</h2>
+          <div class="section-kicker">Kimler için</div>
+          <h2 class="section-title">İhtiyacı olan herkes için hızlı bir yardımcı.</h2>
           <p class="section-copy">
-            Okulda, yolda, bos bir anda ya da sadece meraktan. Kisa kullanim
-            senaryolarina uygun oldugu icin farkli ihtiyaclara rahatca uyum saglar.
+            Okulda, yolda, boş bir anda ya da sadece meraktan. Kısa kullanım
+            senaryolarına uygun olduğu için farklı ihtiyaçlara rahatça uyum sağlar.
           </p>
         </div>
 
         <div class="audience-grid">
           <article class="audience-card">
-            <h3>Ogrenciler</h3>
-            <p>Sinav oncesi ya da genel kultur amacli, kisa araliklarda hizli tekrar yapabilir.</p>
+            <h3>Öğrenciler</h3>
+            <p>Sınav öncesi ya da genel kültür amaçlı, kısa aralıklarda hızlı tekrar yapabilir.</p>
           </article>
 
           <article class="audience-card">
-            <h3>Surucu adaylari</h3>
-            <p>Plaka kodlarini akilda tutmak isteyenler, net ve tekrar edilebilir turlarla pratik yapar.</p>
+            <h3>Sürücü adayları</h3>
+            <p>Plaka kodlarını akılda tutmak isteyenler, net ve tekrar edilebilir turlarla pratik yapar.</p>
           </article>
 
           <article class="audience-card">
-            <h3>Merakli kullanicilar</h3>
-            <p>Bilgi yarismasi sevenler ya da kendini test etmek isteyenler icin hafif ve eglenceli bir arac olur.</p>
+            <h3>Meraklı kullanıcılar</h3>
+            <p>Bilgi yarışması sevenler ya da kendini test etmek isteyenler için hafif ve eğlenceli bir araç olur.</p>
           </article>
         </div>
       </div>
@@ -1315,27 +1331,23 @@
       <div class="page-shell">
         <div class="cta-panel">
           <div>
-            <div class="section-kicker">Indir</div>
-            <h2>Bir dakikada basla, duzenli sekilde ilerle.</h2>
+            <div class="section-kicker">İndir</div>
+            <h2>Bir dakikada başla, düzenli şekilde ilerle.</h2>
             <p>
-              81 Il Plaka, uygulamayi ilk kez acan birinin bile zorlanmadan kullanabilecegi
-              kadar sade. Indirdikten sonra beklemeden ilk tura gecip hangi plakalarda
-              eksigin oldugunu hemen gorebilirsin.
+              81 İl Plaka, uygulamayı ilk kez açan birinin bile zorlanmadan kullanabileceği
+              kadar sade. İndirdikten sonra beklemeden ilk tura geçip hangi plakalarda
+              eksiğin olduğunu hemen görebilirsin.
             </p>
 
             <div class="cta-actions">
               <a class="primary-button" href="https://apps.apple.com/tr/app/81-il-plaka/id_REPLACE_ME" target="_blank" rel="noopener">
                 <i class="bi bi-apple"></i>
-                App Store'da ac
+                App Store'dan indir
               </a>
               <a class="secondary-button" href="#ust">
                 <i class="bi bi-arrow-up-right-circle"></i>
-                Basa don
+                Başa dön
               </a>
-            </div>
-
-            <div class="cta-note">
-              App Store baglantisi hazir oldugunda `id_REPLACE_ME` degerini guncelle.
             </div>
           </div>
 
@@ -1355,10 +1367,10 @@
       <div class="footer-card">
         <div>
           <div class="footer-brand">
-            <img src="icon-192.png" alt="81 Il Plaka simgesi" />
-            <span>81 Il Plaka</span>
+            <img src="icon-192.png" alt="81 İl Plaka simgesi" />
+            <span>81 İl Plaka</span>
           </div>
-          <div class="footer-meta">(c) 2026 TuDePi. Sade, hizli ve odakli bir ogrenme deneyimi.</div>
+          <div class="footer-meta">© 2026 TuDePi. Sade, hızlı ve odaklı bir öğrenme deneyimi.</div>
         </div>
 
         <div class="footer-links">
