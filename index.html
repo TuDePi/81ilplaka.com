@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>81 İl Plaka | Türkiye'nin 81 İl Plaka Kodlarını Öğren</title>
+  <title>Türkiye'nin 81 İl Plaka Kodlarını Öğren | 81 İl Plaka</title>
   <meta
     name="description"
-    content="81 İl Plaka ile Türkiye'nin 81 il plaka kodlarını öğren. Flashcard, çoktan seçmeli ve hız turu modlarıyla ücretsiz, reklamsız ve offline iPhone uygulaması."
+    content="81 İl Plaka ile Türkiye'nin 81 il plaka kodlarını öğren. Flashcard, çoktan seçmeli, hız turu ve sıralı modlarla ücretsiz, reklamsız ve offline iPhone uygulaması."
   />
   <meta
     name="keywords"
-    content="81 il plaka, 81 il plaka kodları, türkiye plaka kodları, plaka kodu ezberleme, il plaka öğrenme, iPhone quiz uygulaması"
+    content="81 il plaka, 81 il plaka kodları, türkiye plaka kodları, plaka kodu ezberleme, il plaka öğrenme, plaka kodları uygulaması, iPhone quiz uygulaması"
   />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="author" content="TuDePi" />
   <meta name="theme-color" content="#0f172a" />
   <link rel="canonical" href="https://81ilplaka.com/" />
   <link rel="alternate" hreflang="tr-TR" href="https://81ilplaka.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://81ilplaka.com/" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
 
-  <meta property="og:title" content="81 İl Plaka | Türkiye plaka kodları uygulaması" />
+  <meta property="og:title" content="Türkiye'nin 81 İl Plaka Kodlarını Öğren | 81 İl Plaka" />
   <meta
     property="og:description"
     content="Türkiye'nin 81 il plaka kodlarını kısa quiz turlarıyla öğren. Ücretsiz, reklamsız ve offline çalışan iPhone uygulaması."
@@ -28,14 +30,18 @@
   <meta property="og:site_name" content="81 İl Plaka" />
   <meta property="og:locale" content="tr_TR" />
   <meta property="og:image" content="https://81ilplaka.com/icon-512.png" />
+  <meta property="og:image:alt" content="81 İl Plaka iPhone uygulama simgesi" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="81 İl Plaka | Türkiye'nin plaka kodlarını öğren" />
+  <meta name="twitter:title" content="Türkiye'nin 81 İl Plaka Kodlarını Öğren | 81 İl Plaka" />
   <meta
     name="twitter:description"
-    content="81 il plaka kodlarını flashcard, quiz ve hız turu modlarıyla öğren. iPhone için ücretsiz ve offline uygulama."
+    content="81 il plaka kodlarını flashcard, quiz, hız turu ve sıralı modlarla öğren. iPhone için ücretsiz ve offline uygulama."
   />
   <meta name="twitter:image" content="https://81ilplaka.com/icon-512.png" />
+  <meta name="twitter:image:alt" content="81 İl Plaka iPhone uygulama simgesi" />
 
   <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,6 +73,13 @@
           "operatingSystem": "iOS",
           "url": "https://81ilplaka.com/",
           "image": "https://81ilplaka.com/icon-512.png",
+          "screenshot": [
+            "https://81ilplaka.com/screenshots/01-hero-1320x2868.png",
+            "https://81ilplaka.com/screenshots/02-modes-1320x2868.png",
+            "https://81ilplaka.com/screenshots/03-ranked-1320x2868.png",
+            "https://81ilplaka.com/screenshots/04-flashcard-1320x2868.png",
+            "https://81ilplaka.com/screenshots/05-tracking-1320x2868.png"
+          ],
           "description": "Türkiye'nin 81 il plaka kodlarını flashcard, klasik quiz, çoktan seçmeli ve hız turu modlarıyla öğreten ücretsiz uygulama.",
           "inLanguage": "tr-TR",
           "offers": {
@@ -79,12 +92,15 @@
             "Flashcard modu",
             "Çoktan seçmeli quiz",
             "Hız turu",
+            "Sıralı mod",
+            "İlerleme takibi",
             "Offline kullanım",
             "Reklamsız deneyim"
           ],
           "publisher": {
             "@type": "Organization",
-            "name": "TuDePi"
+            "name": "TuDePi",
+            "url": "https://github.com/TuDePi"
           }
         },
         {
@@ -201,6 +217,7 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
+      min-width: 0;
       text-decoration: none;
       font-weight: 800;
       letter-spacing: -0.02em;
@@ -990,7 +1007,16 @@
         grid-template-columns: 1fr;
       }
 
-      .band,
+      .band {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .band .secondary-button {
+        width: auto;
+        align-self: flex-start;
+      }
+
       .footer-card {
         align-items: flex-start;
       }
@@ -1003,19 +1029,45 @@
       }
 
       .brand span:last-child {
-        max-width: 110px;
+        display: block;
+        max-width: 140px;
         line-height: 1.1;
+        font-size: 1.05rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .brand {
+        gap: 10px;
+        flex: 1 1 auto;
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px;
       }
 
       .nav-cta {
-        padding: 11px 15px;
-        font-size: 0.88rem;
+        padding: 10px 13px;
+        font-size: 0.84rem;
+        min-height: 44px;
+        flex-shrink: 0;
       }
 
       .hero h1 { font-size: clamp(2.5rem, 13vw, 4rem); }
 
       .primary-button,
       .secondary-button {
+        width: 100%;
+      }
+
+      .band {
+        padding: 22px 20px;
+        border-radius: 24px;
+      }
+
+      .band .secondary-button {
         width: 100%;
       }
     }
@@ -1047,15 +1099,15 @@
             <div>
               <div class="eyebrow">
                 <i class="bi bi-stars"></i>
-                iPhone için sade plaka kodu quiz uygulaması
+                iPhone için sade plaka kodları quiz uygulaması
               </div>
 
-              <h1>Türkiye'nin <span>81 il plaka kodunu</span> öğren.</h1>
+              <h1>Türkiye'nin <span>81 il plaka kodlarını</span> öğren.</h1>
 
               <p class="hero-copy">
-                81 İl Plaka, Türkiye plaka kodlarını ezberlemeyi kolaylaştıran sade bir
-                iPhone uygulamasıdır. Flashcard, quiz ve hız turu modlarıyla uygulamayı
-                aç, modunu seç ve hemen başla.
+                81 İl Plaka, Türkiye'nin 81 il plaka kodlarını ezberlemeyi kolaylaştıran
+                sade bir iPhone uygulamasıdır. Flashcard, quiz, hız turu ve sıralı modlarla
+                uygulamayı aç, modunu seç ve hemen başla.
               </p>
 
               <div class="hero-actions">
@@ -1127,8 +1179,8 @@
           <div class="section-kicker">Nasıl çalışır</div>
           <h2 class="section-title">Üç adımlık net bir başlangıç.</h2>
           <p class="section-copy">
-            Uygulamayı aç, sana uygun modu seç ve kısa tekrarlarla Türkiye'nin plaka
-            kodlarını kalıcı hale getir. Her şey hızlı başlaman için sade tutuldu.
+            Uygulamayı aç, sana uygun modu seç ve kısa tekrarlarla Türkiye'nin 81 il
+            plaka kodlarını kalıcı hale getir. Her şey hızlı başlaman için sade tutuldu.
           </p>
         </div>
 
@@ -1209,7 +1261,7 @@
           <h2 class="section-title">Plaka öğrenmeyi hafif ve düzenli tutar.</h2>
           <p class="section-copy">
             81 İl Plaka, dikkat dağıtmayan arayüzü ve hızlı turları sayesinde
-            Türkiye'nin 81 il plaka kodlarını öğrenmeyi daha kolay ve daha düzenli hale getirir.
+            Türkiye'nin 81 il plaka kodlarını öğrenmeyi daha kolay, daha hızlı ve daha düzenli hale getirir.
           </p>
         </div>
 
@@ -1256,7 +1308,7 @@
           <h2 class="section-title">81 il plaka kodları hakkında sık sorulan sorular.</h2>
           <p class="section-copy">
             En çok merak edilen ayrıntıları tek yerde topladık. Böylece uygulamayı
-            indirmeden önce nasıl çalıştığını ve sana uygun olup olmadığını hızla görebilirsin.
+            indirmeden önce 81 il plaka kodları uygulamasının nasıl çalıştığını ve sana uygun olup olmadığını hızla görebilirsin.
           </p>
         </div>
 
