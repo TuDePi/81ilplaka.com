@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>81 İl Plaka | App Store'da Yakında</title>
+  <meta
+    name="description"
+    content="81 İl Plaka App Store sayfası çok yakında yayında olacak. Uygulama hakkında bilgi almak için ana sayfaya dönebilirsiniz."
+  />
+  <meta name="robots" content="noindex,follow,max-image-preview:large" />
+  <meta name="author" content="TuDePi" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="canonical" href="https://81ilplaka.com/coming-soon.html" />
+  <link rel="alternate" hreflang="tr-TR" href="https://81ilplaka.com/coming-soon.html" />
+  <link rel="alternate" hreflang="x-default" href="https://81ilplaka.com/coming-soon.html" />
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+  <link rel="shortcut icon" href="favicon-32.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <meta property="og:title" content="81 İl Plaka | App Store'da Yakında" />
+  <meta
+    property="og:description"
+    content="81 İl Plaka çok yakında App Store'da yayında olacak."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://81ilplaka.com/coming-soon.html" />
+  <meta property="og:site_name" content="81 İl Plaka" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:image" content="https://81ilplaka.com/icon-512.png" />
+  <meta property="og:image:alt" content="81 İl Plaka uygulama simgesi" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="81 İl Plaka | App Store'da Yakında" />
+  <meta
+    name="twitter:description"
+    content="81 İl Plaka çok yakında App Store'da yayında olacak."
+  />
+  <meta name="twitter:image" content="https://81ilplaka.com/icon-512.png" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    :root {
+      color-scheme: dark;
+      --bg: #0f172a;
+      --panel: rgba(15, 23, 42, 0.84);
+      --card: rgba(30, 41, 59, 0.72);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --line: rgba(226, 232, 240, 0.1);
+      --accent: #3b82f6;
+      --accent-2: #8b5cf6;
+      --yellow: #eab308;
+      --shadow: 0 22px 60px rgba(2, 6, 23, 0.45);
+      --max: 960px;
+    }
+
+    html {
+      min-height: 100%;
+      scroll-behavior: smooth;
+      background-color: #0b1224;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background-color: #0b1224;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.22), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.2), transparent 28%),
+        linear-gradient(180deg, #0b1224 0%, #0f172a 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    .page-shell {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      padding: 18px 0;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(15, 23, 42, 0.72);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.08);
+    }
+
+    .site-nav-inner {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(59, 130, 246, 0.35);
+    }
+
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      color: #ffffff;
+      font-weight: 800;
+      box-shadow: 0 16px 32px rgba(59, 130, 246, 0.28);
+      transition: transform 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .button:hover { transform: translateY(-2px); }
+
+    .hero {
+      padding: 48px 0 68px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      padding: 38px;
+      border-radius: 38px;
+      background: var(--panel);
+      border: 1px solid rgba(226, 232, 240, 0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 14% 16%, rgba(59, 130, 246, 0.16), transparent 24%),
+        radial-gradient(circle at 88% 12%, rgba(139, 92, 246, 0.18), transparent 28%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(234, 179, 8, 0.14);
+      border: 1px solid rgba(234, 179, 8, 0.3);
+      color: var(--yellow);
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-family: "Fraunces", serif;
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 0.94;
+      margin-bottom: 16px;
+      max-width: 11ch;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 58ch;
+      color: var(--muted);
+      font-size: 1.06rem;
+      margin: 0 0 26px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      color: #ffffff;
+      box-shadow: 0 16px 32px rgba(59, 130, 246, 0.28);
+    }
+
+    .button-secondary {
+      background: rgba(30, 41, 59, 0.68);
+      border: 1px solid rgba(226, 232, 240, 0.12);
+      color: var(--text);
+    }
+
+    .status-card {
+      padding: 24px;
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(30, 41, 59, 0.86), rgba(15, 23, 42, 0.92));
+      border: 1px solid rgba(226, 232, 240, 0.08);
+    }
+
+    .status-icon {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 18px;
+      border-radius: 24px;
+      box-shadow: 0 16px 36px rgba(59, 130, 246, 0.28);
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.14);
+      border: 1px solid rgba(96, 165, 250, 0.24);
+      color: #bfdbfe;
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .status-title {
+      font-size: 1.14rem;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .status-copy {
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    .info {
+      padding-top: 8px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .info-card {
+      padding: 22px;
+      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid rgba(226, 232, 240, 0.08);
+      box-shadow: 0 12px 30px rgba(2, 6, 23, 0.28);
+    }
+
+    .info-card i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: rgba(59, 130, 246, 0.14);
+      color: #93c5fd;
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+    }
+
+    .info-card h2 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .site-footer {
+      padding: 44px 0;
+    }
+
+    .footer-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 18px 22px;
+      border-radius: 24px;
+      background: rgba(30, 41, 59, 0.58);
+      border: 1px solid rgba(226, 232, 240, 0.08);
+    }
+
+    .footer-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .site-nav {
+        padding: 14px 0;
+      }
+
+      .site-nav-inner,
+      .page-shell {
+        width: min(calc(100% - 20px), var(--max));
+      }
+
+      .brand {
+        gap: 10px;
+        flex: 1 1 auto;
+      }
+
+      .brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand span:last-child {
+        display: block;
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .hero-card,
+      .status-card,
+      .info-card {
+        padding: 20px;
+      }
+
+      .nav-link,
+      .button,
+      .button-secondary {
+        width: 100%;
+      }
+
+      .footer-card {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="index.html">
+        <img src="icon-192.png" alt="81 İl Plaka uygulama simgesi" />
+        <span>81 İl Plaka</span>
+      </a>
+
+      <a class="nav-link" href="index.html">
+        <i class="bi bi-arrow-left-circle"></i>
+        Ana sayfa
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="page-shell">
+        <div class="hero-card">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">
+                <i class="bi bi-hourglass-split"></i>
+                App Store sayfası hazırlanıyor
+              </div>
+
+              <h1><span>Çok yakında</span> App Store'da.</h1>
+
+              <p class="hero-copy">
+                81 İl Plaka için App Store indirme sayfası henüz yayında değil.
+                Uygulama çok yakında hazır olacak. O zamana kadar ana sayfadan
+                ekran görüntülerine, özelliklere ve uygulama akışına göz atabilirsin.
+              </p>
+
+              <div class="button-row">
+                <a class="button" href="index.html">
+                  <i class="bi bi-house-door"></i>
+                  Ana sayfaya dön
+                </a>
+                <a class="button-secondary" href="privacy-policy.html">
+                  <i class="bi bi-shield-lock"></i>
+                  Gizlilik politikası
+                </a>
+              </div>
+            </div>
+
+            <aside class="status-card">
+              <img class="status-icon" src="icon-192.png" alt="81 İl Plaka simgesi" />
+              <div class="status-chip">
+                <i class="bi bi-stars"></i>
+                Yayına hazırlık aşamasında
+              </div>
+              <h2 class="status-title">App Store bağlantısı yakında aktif olacak</h2>
+              <p class="status-copy">
+                Şimdilik bu sayfaya yönlendiriliyorsun. Gerçek App Store bağlantısı
+                hazır olduğunda tüm indirme butonları doğrudan oraya gidecek.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info">
+      <div class="page-shell">
+        <div class="info-grid">
+          <article class="info-card">
+            <i class="bi bi-phone"></i>
+            <h2>Uygulamayı incele</h2>
+            <p>Ana sayfada ekran görüntülerini, modları ve uygulamanın nasıl çalıştığını görebilirsin.</p>
+          </article>
+
+          <article class="info-card">
+            <i class="bi bi-badge-ad"></i>
+            <h2>Sade deneyim</h2>
+            <p>81 İl Plaka reklamsız, hızlı ve tek elde kullanımı kolay bir öğrenme deneyimi sunmak için tasarlandı.</p>
+          </article>
+
+          <article class="info-card">
+            <i class="bi bi-bell"></i>
+            <h2>Yakında hazır</h2>
+            <p>App Store yayını tamamlandığında bu geçici sayfa yerine doğrudan indirme akışı açılacak.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell">
+      <div class="footer-card">
+        <p>© 2026 TuDePi. 81 İl Plaka App Store coming soon sayfası.</p>
+        <div class="footer-links">
+          <a href="index.html">Ana sayfa</a>
+          <a href="privacy-policy.html">Gizlilik Politikası</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
